@@ -1,0 +1,538 @@
+/* CSS VARIABLES */
+:root {
+  --primary: #141414;
+  --light: #f3f3f3;
+  --dark: #686868;
+}
+
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+  color: var(--light);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  padding-top: 60px;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* HEADER */
+header {
+  position: absolute;
+  top: 0;
+  display: flex;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 0px;
+  height: auto;
+  padding: 10px;
+  z-index: 2;
+  width: 100%;
+}
+
+.netflixLogo {
+  grid-area: nt;
+  object-fit: cover;
+  width: 30%;
+  max-height: 100%;
+  padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.netflixLogo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#logo {
+  color: #e50914;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  padding: 0 30px 0 2px;
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 5px;
+  font-size: 1.2rem;
+  font-family: var(--medium);
+  white-space: nowrap;
+}
+
+.main-nav a:hover {
+  color: var(--dark);
+}
+.main-nav .signin{
+  margin-left: auto;
+}
+/* MAIN CONTIANER */
+.main-container {
+  padding: 50px;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box > a {
+  margin: 10px;
+}
+
+.box a {
+  transition: transform 0.3s;
+  width: 15%;
+}
+
+.box a:hover {
+  transition: transform 0.3s;
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.2);
+}
+
+.box img {
+  border-radius: 2px;
+  width: 100%;
+}
+
+/* LINKS */
+.link {
+  padding: 50px;
+}
+
+.sub-links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sub-links a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.sub-links a:hover {
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+.logos a {
+  padding: 10px;
+}
+
+.logo {
+  color: var(--dark);
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--dark);
+  margin: 10px;
+}
+.main-nav{
+  padding-right: 0;
+}
+/* MEDIA QUERIES */
+@media (max-width: 1300px) {
+  .box a {
+    width: 18%;
+  }
+}
+@media (max-width: 1140px) {
+  .box > a {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 950px) {
+  .box a {
+    width: 15%;
+  }
+}
+@media (max-width:650px){
+  .main-nav{
+    padding-right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .box a {
+    width: 17%;
+  }
+
+  .sub-links ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    font-size: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .netflixLogo {
+    max-width: 100%;
+    width: 100%;
+    width: 100px;
+  }
+
+  .main-nav {
+    width: 90%;
+    text-align: center;
+    padding: 0;
+    justify-content: center;
+    font-size: 0.8rem;
+    /* flex-direction: column; */
+    align-items: center;
+  }
+  .main-nav .movies{
+    margin: auto;
+  }
+  .main-nav button{
+    padding: 5px 1rem;
+    font-size: 0.8rem;
+  }
+  .main-nav a {
+    font-size: 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .box a {
+    width: 30%;
+  }
+
+  .box a:hover {
+    transition: transform 0.3s;
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1.2);
+  }
+
+  .logos {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+
+  .sub-links ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    font-size: 15px;
+  }
+}
+@media(max-width:420px){
+  .main-nav {
+    width: 90%;
+    font-size: 0.6rem;
+    /* flex-direction: column; */
+    align-items: center;
+  }
+  .main-nav .movies{
+    margin: auto;
+  }
+  .main-nav button{
+    padding: 2px 12px;
+    font-size: 0.7rem;
+  }
+  .main-nav a {
+    font-size: 0.8rem;
+  }
+}
+@media(max-width:380px){
+  header{
+    flex-direction: column;
+  }
+}
+@media (max-width: 420px) {
+  .box a {
+    width: 30%;
+  }
+}
+@media (max-width: 400px) {
+  .box a {
+    width: 28%;
+  }
+}
+
+.info-card {
+  width: 100%;
+  padding: 1rem;
+  /* background: url(http://image.tmdb.org/t/p/original/dK12GIdhGP6NPGFssK2Fh265jyr.jpg); */
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  margin: 1rem auto;
+  margin-bottom: 1.5rem;
+}
+
+.info-card .title {
+  font-size: 2rem;
+  text-align: left;
+  padding-left: 0;
+  padding: 1rem;
+}
+
+.info-card .overview {
+  width: 40%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.info-card .button-container {
+  padding: 1rem;
+}
+.info-card .button-container button {
+  padding: 10px 2rem;
+}
+
+.blur {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@media (max-width: 1195px) {
+  .info-card {
+    background-position: center;
+    background-size: cover;
+  }
+  .blur {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+  .info-card .overview {
+    width: 70%;
+  }
+}
+@media (max-width: 870px) {
+  .info-card {
+    background-position: center;
+  }
+}
+@media (max-width: 500px) {
+  .box a {
+    width: 27%;
+  }
+  .info-card .title {
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 0;
+    padding: 10px;
+  }
+  .info-card .overview {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.6rem;
+  }
+  .info-card .button-container button {
+    padding: 5px 1.2rem;
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 900px) {
+  .info-card .title {
+    font-size: 1.2rem;
+    text-align: left;
+    padding-left: 0;
+    padding: 10px;
+  }
+  .info-card .overview {
+    width: 90%;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .info-card .button-container button {
+    padding: 9px 1.7rem;
+    font-size: 1rem;
+  }
+}
+
+.popup-wrapper {
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 3;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 570px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  height: 350px;
+  background: white;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 655px) {
+  .popup {
+    max-width: 480px;
+    height: 240px;
+  }
+}
+@media (max-width: 510px) {
+  .popup {
+    max-width: 360px;
+    height: 210px;
+  }
+}
+
+.attributes {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.made {
+  text-align: center;
+  padding-top: 5px;
+  width: 10%;
+  opacity: 0.5;
+  white-space: nowrap;
+  width: auto;
+  padding-right: 1rem;
+}
+.tmdb-logo {
+  width: 200px;
+  opacity: 0.5;
+}
+@media (max-width: 900px) {
+    .made{
+        padding-right: 0;
+    }
+  .attributes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .attributes > div {
+    margin: 1rem auto;
+  }
+}
+@media (max-width: 400px) {
+  .link {
+    padding: 10px;
+  }
+  .attributes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.browse-hero-section{
+    height: 100vh;
+}
+
+.browse-hero-section .hero{
+    /* background: url("http://image.tmdb.org/t/p/original/dK12GIdhGP6NPGFssK2Fh265jyr.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-section::after{
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 80px 50px 210px #000000, inset -80px -50px 210px #000000 !important;
+}
+
+.hero{
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.hero-text-container,.hero-text-container .title{
+    text-align: left;
+}
+
+.hero-text-container > div > *{
+    margin: 1rem auto;
+}
+
+.hero-text-container .title{
+    padding-left: 0;
+}
+
+@media(max-width:400px){
+    .hero-text-container p{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width:412px){
+  .hero-section::after{
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 50px 20px 210px #000000, inset -50px -20px 210px #000000 !important;
+}
+}

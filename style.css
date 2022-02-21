@@ -1,0 +1,1089 @@
+/*
+
+font-family: 'netflix_sansmedium';
+font-family: 'netflix_sanslight';
+font-family: 'netflix_sansbold';
+
+
+tv path :
+https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v
+mac path : 
+https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v
+
+*/
+
+:root{
+    --red : #e50914;
+    --grey : #757575;
+    --accordian-grey : #333333;
+    --bold : 'netflix_sansbold';
+    --light : 'netflix_sanslight';
+    --medium : 'netflix_sansmedium';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: var(--light);
+    overflow-x: hidden;
+}
+a{
+    height: auto;
+}
+.hero-section{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.nav-container{
+    height: auto;
+    background-color: transparent;
+    position: absolute;
+    top : 0;
+    right: 0;
+    left: 0;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    width: 95%;
+}
+.logo{
+    width: 201px;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-btn{
+    margin-left: auto;
+}
+
+button{
+    padding: 10px 19px;
+    font-size: 1rem;
+    font-family: var(--medium);
+    background-color: var(--red);
+    color: white;
+    border-style: none;
+    border-radius: 4px;
+}
+
+
+.hero{
+    height: 100%;
+    width: 100%;
+    background: url(/assets/herobg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 110px 90px 210px #000000,inset -100px -90px 210px #000000;
+}
+
+.hero-text-container{
+    color: white;
+    z-index: 2;
+    width: 60%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+    font-family: var(--bold);
+    font-size: 3.6rem;
+    line-height: 1.1;
+    padding: 0 2rem;
+}
+
+.sub-1,.sub-2{
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    font-family: var(--light);
+    line-height: 2;
+}
+
+.sub-2{
+    font-size: 1.2rem;
+}
+.buttons > *{
+    display: block;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    width: 89%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.email{
+    width: 70%;
+    padding-left: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.hero-text-container button{
+    width: 30%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    font-family: var(--light);
+    font-weight: 600;
+}
+
+.hero-text-container button:hover{
+    background-color: rgb(255, 4, 16);
+}
+
+@media screen and (max-width:1250px) {
+    .sign-in-btn button{
+        padding: 8px 15px;
+    }
+    .logo{
+        width: 150px;
+    }
+    .title{
+        font-size: 3rem;
+    }
+    .sub-1{
+        font-size: 1.2rem;
+    }
+    .sub-2{
+        font-size: 1rem;
+    }
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttons > *{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .hero-text-container button{
+        padding: 1rem;
+        font-size: 1.1rem;
+        white-space: nowrap;
+        font-family: var(--light);
+        font-weight: 600;
+    }
+    .email{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:995px) {
+    .logo{
+        width: 110px;
+    }
+    .sign-in-btn button{
+        padding: 4px 10px;
+        font-size: 1rem;
+        font-family: var(--light);
+        padding-bottom: 6px;
+    }
+    .title{
+        font-size: 2.6rem;
+        padding: 0;
+    }
+    .hero-text-container button{
+        padding: 1rem;
+        font-size: 1.1rem;
+        white-space: nowrap;
+        font-family: var(--light);
+        font-weight: 600;
+        width: 40%;
+    }
+    .email{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .title{
+        font-size: 2rem;
+        padding: 0;
+    }
+    .sub-1{
+        font-size: 1rem;
+    }
+    .sub-2{
+        font-size: 1rem;
+    }
+    .buttons > *{
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    .hero-text-container button{
+        padding: 1rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        font-family: var(--light);
+        font-weight: 600;
+        width: 40%;
+    }
+    .email{
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .title{
+        font-size: 1.6rem;
+    }
+    .buttons > *{
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    .hero-text-container button{
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        font-family: var(--light);
+        font-weight: 600;
+        width: 50%;
+    }
+    .email{
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:510px) {
+    .hero::after{
+         box-shadow: inset 110px 90px 210px #000000,inset -100px -90px 210px #000000;
+    }
+    .hero-text-container{
+        width: 90%;
+    }
+    .hero-text-container > *{
+        margin: 2rem 0;
+    }
+    .title{
+        padding: 0;
+        font-size: 1.2rem;
+    }
+    .buttons{
+        margin: auto;
+    }
+    .sub-1{
+        font-size: 0.9rem;
+        padding: 0;
+    }
+    .sub-2{
+        font-size: 0.8rem;
+    }
+    .email{
+        padding: 0.3rem;
+        font-size: 0.65rem;
+    }
+    .hero-text-container button{
+        padding: 0.4rem;
+        font-size: 0.7rem;
+        white-space: nowrap;
+        font-family: var(--light);
+        font-weight: 600;
+        width: 54%;
+    }
+}
+
+/* --------------end of hero--------------------- */
+
+.tv-section{
+    height: auto;
+    padding: 2rem 12rem;
+    border-top: 7px solid #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #000000;
+}
+
+.tv-image img{
+    width: 100%;
+    z-index: 1;
+    object-fit: cover;
+}
+.tv-image{
+    position: relative;
+    width: 35%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.tv-image video{
+    position: absolute;
+    top:60px;
+    left: 51px;
+    width: 73%;
+    z-index: 0;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    padding: 6rem 0;
+    width: 65%;
+}
+
+.head{
+    font-size: 3rem;
+    font-family: var(--bold);
+    font-weight: 800;
+}
+
+.sub-head{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-family: var(--light);
+    width: 70%;
+}
+
+@media screen and (max-width:1225px) {
+    .head{
+        font-size: 2.1rem;
+    }
+    .sub-head{
+        font-size: 1.6rem;
+    }
+    .tv-section{
+        padding: 1rem 5rem;
+    }
+    .tv-image video{
+        top:60px;
+        left: 51px;
+        width: 73%;
+    }
+}
+
+@media screen and (max-width:1130px) {
+    .head{
+        font-size: 1.8rem;
+    }
+    .sub-head{
+        font-size: 1.3rem;
+    }
+    .tv-image video{
+        top:50px;
+        left: 45px;
+        width: 72%;
+    }
+}
+
+@media screen and (max-width:1030px) {
+    .head{
+        font-size: 1.8rem;
+    }
+    .sub-head{
+        font-size: 1.3rem;
+    }
+    .tv-image video{
+        top:45px;
+        left: 40px;
+        width: 73%;
+    }
+}
+
+@media screen and (max-width:910px) {
+    .head{
+        font-size: 1.8rem;
+    }
+    .sub-head{
+        font-size: 1.3rem;
+    }
+    .tv-image video{
+        top:40px;
+        left: 35px;
+        width: 74%;
+    }
+}
+
+@media screen and (max-width:880px) {
+    .text{
+        padding: 0;
+    }
+    .text{
+        width: 99%;
+    }
+    .text-section > *{
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .head{
+        font-size: 1.4rem;
+    }
+    .tv-section{
+        flex-direction: column;
+        padding: 3rem;
+    }
+    .tv-image{
+        width: 60%;
+    }
+    .tv-image video{
+        top:60px;
+        left: 50px;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .tv-image video{
+        top:55px;
+        left: 47px;
+        width: 74%;
+    }
+}
+
+@media screen and (max-width:625px) {
+    .tv-image{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:525px) {
+    .tv-image{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:467px) {
+    .tv-section{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .text{
+        width: 100%;
+    }
+    .text-section{
+        width: 100%;
+    }
+    .tv-image{
+        width: 90%;
+    }
+    .tv-image video{
+        top:53px;
+        left: 43px;
+        width: 74%;
+    }
+}
+
+@media screen and (max-width:407px){
+    .tv-image video{
+        top:48px;
+        left: 37px;
+        width: 74%;
+    }
+}
+@media screen and (max-width:387px){
+    .tv-image video{
+        top:43px;
+        left: 37px;
+        width: 74%;
+    }
+}
+@media screen and (max-width:355px){
+    .tv-image video{
+        top:40px;
+        left: 33px;
+        width: 74%;
+    }
+}
+@media screen and (max-width:307px){
+    .tv-image{
+        width: 100%;
+    }
+    .tv-image video{
+        top:35px;
+        left: 30px;
+        width: 74%;
+    }
+}
+/* -----------------end of tv-section-------------- */
+
+.st-image{
+    width: 45%;
+    position: relative;
+}
+.st-text{
+    width: 55%;
+}
+
+.st-image img{
+    width: 100%;
+}
+
+.download-box{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    bottom: 5%;
+    left: 15%;
+    width: 70%;
+    padding: 10px;
+    justify-content: space-evenly;
+    background: #000000;
+    border-style: none;
+    border-radius: 16px;
+    border: 2px solid #333333;
+}
+
+.download-box > div{
+    height: 100px;
+}
+.download-box .img-container img{
+    height: 100%;
+}
+
+.download-box .img-text,.download-box .gif-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.download-box .gif-container img{
+    height: 60px;
+}
+.img-text-title{
+    font-weight: 700;
+    white-space: nowrap;
+}
+.img-text-download{
+    margin-top: 3px;
+    font-size: 0.8rem;
+    color: #0071eb;
+
+}
+@media screen and (max-width:1280px) {
+    .st-image{
+        width: 60%;
+    }
+}
+@media screen and (max-width:1235px) {
+    .st-section{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media screen and (max-width:1045px) {
+    .download-box .gif-container img{
+        height: 52px;
+    }
+    .download-box > div{
+        height: 80px;
+    }
+}
+@media screen and (max-width:890px) {
+    .st-image{
+        width: 50%;
+    }
+    .download-box .gif-container img{
+        height: 50px;
+    }
+    .download-box > div{
+        height: 70px;
+    }
+    .st-text{
+        width: 80%;
+    }
+    .st-text .text-section{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:725px){
+    .st-image{
+        width: 56%;
+    }
+}
+@media screen and (max-width:700px){
+    .st-image{
+        width: 65%;
+    }
+}
+@media screen and (max-width:590px){
+    .st-image{
+        width: 75%;
+    }
+}
+@media screen and (max-width:485px){
+    .st-image{
+        width: 100%;
+    }
+}
+@media screen and (max-width:430px){
+    .download-box > div{
+        height: 50px;
+    }
+    .img-text-title{
+        font-size: 0.7rem;
+    }
+    .img-text-download{
+        font-size: 0.5rem;
+    }
+}
+@media screen and (max-width:380px) {
+    .st-section{
+        padding: 0;
+        padding-bottom: 2.5rem;
+    }
+    .download-box{
+        bottom: 2%;
+    }
+    .download-box > div{
+        margin: 2px 3px;
+    }
+}
+/* ---------------------end of st-------------- */
+.mac-text{
+    width: 50%;
+}
+
+.mac-video{
+    width: 50%;
+}
+.mac-video video{
+    top:40px;
+        left: 100px;
+        width: 65%;
+}
+@media screen and (max-width:1311px) {
+    .mac-video video{
+        top:35px;
+            left: 82px;
+            width: 63%;
+    }
+}
+@media screen and (max-width:1225px) {
+    .mac-section .mac-video video{
+        left: 90px;
+            width: 63% ;
+    }
+}
+
+@media screen and (max-width:1130px) {
+    .head{
+        font-size: 1.8rem;
+    }
+    .sub-head{
+        font-size: 1.3rem;
+    }
+    .mac-section .mac-video video{
+        top:39px;
+        left: 87px;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:1030px) {
+    .head{
+        font-size: 1.8rem;
+    }
+    .sub-head{
+        font-size: 1.3rem;
+    }
+    .mac-section .mac-video video{
+        top:30px;
+        left: 85px;
+        width: 62%;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .head{
+        font-size: 1.8rem;
+    }
+    .sub-head{
+        font-size: 1.3rem;
+    }
+    .mac-section .mac-video video{
+        top:20px;
+        left: 80px;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:880px) {
+    .text{
+        padding: 0;
+    }
+    .text{
+        width: 99%;
+    }
+    .text-section > *{
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .head{
+        font-size: 1.4rem;
+    }
+    .tv-section{
+        flex-direction: column;
+        padding: 3rem;
+    }
+    .tv-image{
+        width: 60%;
+    }
+    .mac-section .mac-video video{
+        top:20px;
+        left: 72px;
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .mac-section .mac-video video{
+        top:20px;
+        left: 78px;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .tv-image{
+        width: 80%;
+    }
+    .mac-section .mac-video video{
+        top:20px;
+        left: 80px;
+        width: 60%;
+    }
+}
+@media screen and (max-width:535px) {
+    .mac-section .mac-video video{
+        top:20px;
+        left: 70px;
+        width: 58%;
+    }
+}
+@media screen and (max-width:485px) {
+    .mac-section .mac-video video{
+        top:20px;
+        left: 60px;
+        width: 60%;
+    }
+    .mac-video{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .mac-section .mac-video video{
+        top:20px;
+        left: 40px;
+        width: 63%;
+    }
+}
+
+@media screen and (max-width:405px){
+    .mac-section .mac-video video{
+        top:15px;
+        left: 47px;
+        width: 60%;
+    }
+}
+@media screen and (max-width:370px){
+    .mac-section .mac-video video{
+        top:20px;
+        left: 40px;
+        width: 60%;
+    }
+}
+@media screen and (max-width:320px){
+    .mac-section .mac-video video{
+        top:15px;
+        left: 30px;
+        width: 61%;
+    }
+}
+@media screen and (max-width:3px){
+    .tv-image{
+        width: 100%;
+    }
+    .tv-image video{
+        top:35px;
+        left: 30px;
+        width: 74%;
+    }
+}
+/* --------------end of mac--------------- */
+
+@media screen and (max-width:1210px) {
+    .children-image{
+        width: 50%;
+    }
+    .children-text{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .children-image{
+        width: 85%;
+    }
+    .children-text{
+        width: 90%;
+    }
+}
+
+/* ------------------end of children-section------------- */
+
+/* Centers horizontally */
+.qna{
+    max-width: 900px;
+    margin: 0 auto;
+    width: 60%;
+  }
+  /* Button default resets */
+  button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  /* Styling the accordion buttons */
+  .accordion{
+    width: 100%;
+    background-color: #303030;
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 18px 40px;
+    margin-bottom: 1px;
+    text-align: left;
+    /*  To push the plus sign to the right  */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--light);
+  }
+  /* adding the "plus" sign (+) */ 
+  .accordion::after{
+    content: '\02795';
+    font-size: 20px;
+    color: #fff;
+  }
+  .panel{
+    background-color: #303030;
+    color: #fff;
+    margin-bottom: 4px;
+    overflow: hidden;
+    transition: max-height .33s cubic-bezier(.5,0,.1,1),padding .33s cubic-bezier(.5,0,.1,1);
+  }
+  .panel > p {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  .panel-closed{
+    max-height: 0;
+    overflow: hidden;
+  }
+  .panel-open{
+      padding: 1rem;
+    max-height: 700px;
+  }
+  /* active class for accordion, adds the "cross sign (x)" */
+  .accordion-active::after {
+    content: "\274C";
+  }
+
+  /* -----------accordian-ends------------ */
+
+  /* -----------faqs-design-section---------- */
+
+  .faqs{
+      background-color: #000000;
+      border-top: 7px solid #333333;
+      padding-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .faqs .header{
+      color: white;
+      font-family: var(--bold);
+      text-align: center;
+      font-size: 3rem;
+      padding: 3rem;
+  }
+
+  .qna > .accordion{
+      margin: 0.4rem auto;
+  }
+  
+
+  @media screen and (max-width:950px) {
+      .faqs .header{
+          padding: 2.5rem;
+          font-size: 2rem;
+      }
+      .accordion{
+          font-size: 1.2rem;
+      }
+      .panel > p{
+          font-size: 18px;
+      }
+  }
+  @media screen and (max-width:670px) {
+      .qna{
+          width: 90%;
+      }
+}
+@media screen and (max-width:500px) {
+    .accordion{
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .panel > p{
+        font-size: 14px;
+    }
+    .panel-open{
+        padding: 5px;
+      max-height: 700px;
+    }
+}
+
+@media screen and (max-width:335px) {
+    .qna{
+        width: 95%;
+    }
+}
+
+/* ------------------end of qna------------------- */
+/* ----------footer-section------------------- */
+.footer-container{
+    padding: 2rem 3rem;
+    background-color: #000000;
+    color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 7px solid #333333;
+}
+.footer{
+    padding: 2rem 3rem;
+    flex-direction: column;
+    width: 80%;
+}
+.footer .header{
+    margin: 3rem auto;
+}
+.footer .header a{
+    color: #757575;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.footer .header a:hover{
+    color: #757575;
+    text-decoration: underline;
+}
+.sub-links ul {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .sub-links a {
+    color: var(--grey);
+    text-decoration: none;
+  }
+  
+  .sub-links a:hover {
+    color: #757575;
+    text-decoration: underline;
+  }
+
+  @media(max-width: 700px) {
+  
+    .sub-links ul {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+     
+  }
+
+  @media(max-width:500px){
+      .sub-links{
+          display: grid;
+          place-items: center;
+      }
+    .sub-links ul {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        font-size: 15px;
+      }
+      .footer .header{
+          text-align: center;
+      }
+  .country{
+    text-align: center;
+}
+  }
+
+  .country{
+      margin-top: 2rem;
+  }
+
+  @media(max-width:390px){
+      .footer{
+          padding: 0;
+      }
+    .call{
+        display: block;
+        width: 100%;
+    }
+  }
+
+  button a{
+      text-decoration: none;
+      color: white;
+  }
+/* ----------------end of footer----------------- */
+  button a:visited{
+    text-decoration: none;
+    color: white;
+  }

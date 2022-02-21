@@ -1,0 +1,34 @@
+.sign-in-card{
+    width: 30%;
+    margin-top: 3.5rem;
+}
+@media(max-width:1207px){
+    .sign-in-card{
+        width: 40%;
+        padding: 2rem;
+    }
+}
+@media(max-width:922px){
+    .sign-in-card{
+        width: 50%;
+        padding: 1.5rem;
+    }
+}
+@media(max-width:690px){
+    .sign-in-card{
+        width: 60%;
+        padding: 1.2rem;
+    }
+}
+@media(max-width:490px){
+    .sign-in-card{
+        width: 70%;
+        padding: 1rem;
+    }
+}
+@media(max-width:390px){
+    .sign-in-card{
+        width: 85%;
+        padding: 0.6rem;
+    }
+}

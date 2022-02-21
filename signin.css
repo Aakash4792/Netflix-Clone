@@ -1,0 +1,104 @@
+*{
+    -webkit-tap-highlight-color: none;
+}
+
+.sign-in-card{
+    height: auto;
+    padding: 3rem;
+    width: 27%;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2;
+    font-family: var(--light);
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-card .header{
+    font-family: var(--bold);
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.form form>*{
+    margin: 8px auto;
+    width: 100%;
+}
+
+.inp{
+    padding: 1rem;
+    font-size: 0.85rem;
+    background-color: var(--accordian-grey);
+    color: var(--grey);
+    border-style: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.submit{
+    padding: 1rem;
+    font-family: var(--medium);
+    font-size: 1rem;
+    color: white;
+    background-color: var(--red);
+    border-style: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: rgb(255, 4, 16);
+}
+
+.sign-in-card-footer > p{
+    padding: 0.9rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+}
+
+.sign-in-card-footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.sign-in-card-footer a:visited{
+    color: white;
+    font-weight: 700;
+}
+
+@media(max-width:1400px){
+    .sign-in-card{
+        width: 33%;
+        padding: 2rem;
+    }
+}
+@media(max-width:1068px){
+    .sign-in-card{
+        width: 39%;
+        padding: 1.7rem;
+    }
+}
+@media(max-width:798px){
+    .sign-in-card{
+        width: 44%;
+        padding: 1.2rem;
+    }
+}
+@media(max-width:620px){
+    .sign-in-card{
+        width: 59%;
+        padding: 1.2rem;
+    }
+}
+@media(max-width:500px){
+    .sign-in-card{
+        width: 85%;
+        padding: 1.2rem;
+    }
+}
